@@ -1,0 +1,143 @@
+@import "../../theme/theme-variables.scss";
+//////this is  foundation section
+.foundation {
+  img {
+    height: 480px;
+    width: 100%;
+    filter: brightness(0.5);
+  }
+
+  .info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    text-align: center;
+  }
+  .carousel-indicators {
+    bottom: 60px;
+    li {
+      box-sizing: content-box;
+      flex: 0 1 auto;
+      width: 16px;
+      height: 14px;
+      border-radius: 50%;
+      margin-right: 3px;
+      margin-left: 3px;
+      text-indent: -999px;
+      cursor: pointer;
+      background-color: $white;
+      background-clip: padding-box;
+    }
+  }
+}
+//////this is  news section
+.news {
+  .latest-news {
+    margin-left: 60px;
+  }
+  .card {
+    width: 20rem;
+    box-shadow: 1px 5px 1px 4px #f7f4f4;
+    .icons {
+      color: $cyan;
+      margin-right: 22px;
+      padding: 11px 0 0 0;
+      font-size: 18px;
+    }
+    .btn-gray {
+      background-color: $gray-200;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      width: 70px;
+    }
+    img {
+      height: 170px;
+    }
+    .fa-calendar-week {
+      color: $cyan;
+    }
+    .date {
+      color: #707070;
+    }
+  }
+}
+/////this is helped section
+.helped {
+  img {
+    width: 100%;
+    height: 600px;
+    filter: brightness(0.5);
+  }
+  li {
+    transition: 0.3s;
+    &:hover {
+      transform: rotate(180deg);
+    }
+  }
+  .info {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    text-align: center;
+  }
+
+  .carousel-indicators {
+    bottom: 60px;
+    z-index: 1;
+    li {
+      box-sizing: content-box;
+      flex: 0 1 auto;
+      width: 16px;
+      height: 14px;
+      border-radius: 50%;
+      margin-right: 3px;
+      margin-left: 3px;
+      text-indent: -999px;
+      cursor: pointer;
+      background-color: $white;
+      background-clip: padding-box;
+    }
+  }
+  .square {
+    height: 135px;
+    width: 135px;
+    border: 2px solid $white;
+    transform: rotate(45deg);
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 67px 33px 0 37px;
+    cursor: pointer;
+    &:hover {
+      background-color: $cyan;
+    }
+    .inside {
+      transform: rotate(-45deg);
+      position: absolute;
+      transform: rotate(-45deg);
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      i {
+        font-size: 31px;
+      }
+      .fa-plus {
+        font-size: 14px;
+      }
+    }
+  }
+  .second {
+    position: absolute;
+    top: 204px;
+    left: 102px;
+  }
+}

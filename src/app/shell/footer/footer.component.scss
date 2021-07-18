@@ -1,0 +1,24 @@
+@import "../../../theme/theme-variables.scss";
+footer {
+  background: $gray-500;
+  a {
+    color: $gray-600;
+  }
+  button {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul {
+    text-align: left;
+    input {
+      background-color: $gray-100;
+    }
+  }
+  .footer-line {
+    background: $indigo;
+    color: $white;
+    font-size: 12px;
+    text-align: center;
+  }
+}

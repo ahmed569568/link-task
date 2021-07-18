@@ -1,0 +1,121 @@
+<section class="news mt-5 mb-5">
+  <div class="container-fluid">
+    <div class="heading">
+      <div class="heading text-left mb-5">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+            <li class="breadcrumb-item"><a routerLink="/news">News</a></li>
+          </ol>
+        </nav>
+        <h2 class="latest-news ml-3">News</h2>
+      </div>
+    </div>
+    <div class="container mb-4">
+      <form class="form-inline">
+        <div class="row">
+          <div class="form-group">
+            <div class="col">
+              <div class="input-group">
+                <div class="datePicker">
+                  <label for="form" class="form-label">From</label>
+                  <input
+                    class="form-control"
+                    placeholder="yyyy-mm-dd"
+                    name="dp"
+                    [(ngModel)]="model"
+                    ngbDatepicker
+                    #d="ngbDatepicker"
+                  />
+                  <div class="input-group-append">
+                    <button class="btn calendar" (click)="d.toggle()" type="button">
+                      <i class="fas fa-calendar-week"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="input-group">
+                <div class="datePicker">
+                  <label for="to" class="form-label">To</label>
+                  <input
+                    class="form-control"
+                    placeholder="yyyy-mm-dd"
+                    name="dp"
+                    [(ngModel)]="model"
+                    ngbDatepicker
+                    #d="ngbDatepicker"
+                  />
+                  <div class="input-group-append">
+                    <button class="btn calendar" (click)="d.toggle()" type="button">
+                      <i class="fas fa-calendar-week"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="input-group">
+                <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+                  <label for="category" class="form-label">category</label>
+                  <button
+                    class="btn btn-outline-primary mr-2"
+                    id="dropdownManual"
+                    ngbDropdownAnchor
+                    (focus)="myDrop.open()"
+                  >
+                    Toggle dropdown
+                  </button>
+                  <div ngbDropdownMenu aria-labelledby="dropdownManual">
+                    <button ngbDropdownItem>Action - 1</button>
+                    <button ngbDropdownItem>Another Action</button>
+                    <button ngbDropdownItem>Something else is here</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="search">
+              <div class="form-group search">
+                <label for="category" class="form-label" style="visibility: hidden">search</label>
+
+                <input type="text" class="form-control" placeholder="Search Services" />
+                <div class="icone-search">
+                  <i class="fas fa-search"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="input-group mt-3">
+                <div class="sort">
+                  <span>Sort By</span>
+                  <i class="fas fa-arrows-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col">
+      <div class="row justify-content-center cards">
+        <div class="card m-2 mt-4" *ngFor="let news of newsList">
+          <img [src]="news.urlToImage" style="height: 170px !important" class="card-img-top" alt="..." />
+          <div class="d-flex justify-content-end icons">
+            <i class="far fa-heart mr-3"></i>
+            <i class="fas fa-share-alt"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ news.title }}</h5>
+            <button class="btn-gray">News</button>
+            <p class="card-text">{{ news.description }}</p>
+            <div>
+              <i class="fas fa-calendar-week"></i>
+              <span class="date">Wed 12 Aug 2020</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

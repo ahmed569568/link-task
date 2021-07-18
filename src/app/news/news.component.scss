@@ -1,0 +1,71 @@
+@import "../../theme/theme-variables.scss";
+//////this is  news section
+.news {
+  background-color: $gray-200;
+  .heading {
+    margin-left: 46px;
+    padding-top: 10px;
+  }
+  .datePicker {
+    position: relative;
+  }
+  label {
+    float: left;
+  }
+  .fa-calendar-week {
+    color: $cyan;
+  }
+  .input-group-append {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .sort {
+    color: $cyan;
+  }
+  .search {
+    position: relative;
+    display: grid;
+    width: 380px;
+    .icone-search {
+      position: absolute;
+      right: 0;
+      background: #13beff;
+      width: 63px;
+      color: $white;
+      padding: 7px;
+      bottom: 0;
+      text-align: center;
+    }
+  }
+  .cards {
+    justify-content: space-around !important;
+    margin: 0px 60px;
+  }
+  .card {
+    width: 22rem;
+    box-shadow: 1px 5px 1px 4px #f7f4f4;
+    .icons {
+      color: $cyan;
+      margin-right: 22px;
+      padding: 11px 0 0 0;
+      font-size: 18px;
+    }
+    .btn-gray {
+      background-color: $gray-200;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      width: 70px;
+    }
+    img {
+      height: 170px;
+    }
+    .fa-calendar-week {
+      color: $cyan;
+    }
+    .date {
+      color: #707070;
+    }
+  }
+}

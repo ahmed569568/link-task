@@ -1,0 +1,25 @@
+@import "../../../theme/theme-variables.scss";
+.sidebar {
+  width: 420px;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+  background-color: $blue !important;
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    background-color: unset;
+    color: $cyan !important;
+  }
+  .side-icons {
+    display: flex;
+    flex-direction: column;
+    bottom: 0px;
+    position: absolute;
+    margin-top: auto;
+  }
+  a {
+    color: $white;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}

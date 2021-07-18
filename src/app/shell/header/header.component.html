@@ -1,0 +1,25 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <div class="d-flex">
+        <button type="button" id="sidebarCollapse" class="button ml-3 pt-2" (click)="toggle()">
+          <div class="menu">
+            <span [class.one]="!menuHidden"></span>
+            <span [class.two]="!menuHidden"></span>
+            <span class="span-three" [class.three]="!menuHidden"></span>
+          </div>
+        </button>
+        <a class="navbar-brand" href="https://github.com/ngx-rocket" translate>Uimk</a>
+      </div>
+      <div class="d-flex align-items-center ml-auto text-light">
+        <i class="fas fa-search mr-4"></i>
+        <i class="far fa-bell mr-4"></i>
+        <div class="mr-4">
+          <img src="../../../assets/img_avatar.png" alt="img" />
+          <span class="username">UserName</span>
+        </div>
+        <i class="fas fa-cog mr-4"></i>
+      </div>
+    </div>
+  </nav>
+</header>

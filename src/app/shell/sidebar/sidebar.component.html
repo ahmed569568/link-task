@@ -1,0 +1,62 @@
+<div *ngIf="toggle" class="sidebar d-flex flex-column flex-shrink-0 p-3 text-white">
+  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <svg class="bi me-2" width="40" height="32">
+      <use xlink:href="#bootstrap" />
+    </svg>
+    <span class="fs-4">Sidebar</span>
+  </a>
+  <hr />
+  <div class="row">
+    <div class="col-3 text-center"></div>
+    <div class="col">
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <a class="nav-item nav-link text-uppercase" routerLink="/home" routerLinkActive="active">
+            <span translate>Home</span>
+          </a>
+        </li>
+        <li>
+          <a class="nav-item nav-link text-uppercase" routerLink="/news" routerLinkActive="active">
+            <span translate>News</span>
+          </a>
+        </li>
+        <li>
+          <a class="nav-item nav-link text-uppercase" routerLinkActive="active">
+            <span translate>News</span>
+          </a>
+        </li>
+        <li>
+          <a class="nav-item nav-link text-uppercase" routerLinkActive="active">
+            <span translate>Careers</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row mt-auto">
+    <div class="col-3 text-center">
+      <div class="side-icons ml-4">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook-square mt-3"></i>
+        <i class="fab fa-linkedin mt-3"></i>
+        <i class="fab fa-youtube mt-3"></i>
+        <i class="fab fa-instagram mt-3"></i>
+      </div>
+    </div>
+    <div class="col">
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li>
+          <a class="nav-item nav-link text-uppercase" routerLinkActive="active">
+            <span translate>Contact Us</span>
+          </a>
+        </li>
+        <li>
+          <a class="nav-item nav-link text-uppercase" routerLinkActive="active">
+            <span translate>Site Map</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <hr />
+</div>
