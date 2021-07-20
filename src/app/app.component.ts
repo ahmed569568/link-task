@@ -1,3 +1,4 @@
+import { LayoutService } from '@app/@shared/services/layout.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
@@ -23,6 +24,7 @@ export class AppComponent implements OnInit, OnDestroy {
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
     private translateService: TranslateService,
+    private layoutService: LayoutService,
     // do not remove the analytics injection, even if the call in ngOnInit() is removed
     // this injection initializes page tracking through the router
     private angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics,
@@ -43,7 +45,10 @@ export class AppComponent implements OnInit, OnDestroy {
     // Setup translations
     this.i18nService.init(environment.defaultLanguage, environment.supportedLanguages);
 
-    const onNavigationEnd = this.router.events.pipe(filter((event) => event instanceof NavigationEnd));
+    const onNavigationEnd = this.router.events.pipe(
+      filter((event) => event instanceof NavigationEnd),
+      map(() => this.layoutService.toggleMenu(false))
+    );
 
     // Change page title on navigation or language change, based on route data
     merge(this.translateService.onLangChange, onNavigationEnd)
