@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class MessageService {
+export class LayoutService {
   menuSubject: Subject<boolean> = new Subject<boolean>();
   constructor() {}
 

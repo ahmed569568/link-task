@@ -2,15 +2,17 @@
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <div class="d-flex">
-        <app-burger-button [menuStatus]="menuStatus" (toggle)="toggle($event)"></app-burger-button>
-        <a class="navbar-brand" href="https://github.com/ngx-rocket" translate>Link</a>
+        <app-burger-button (toggle)="toggle($event)"></app-burger-button>
+        <a class="mt-1 navbar-brand" href="https://github.com/ngx-rocket" translate>
+          <h3>Link</h3>
+        </a>
       </div>
       <div class="d-flex align-items-center ml-auto text-light">
         <i class="fas fa-search mr-4"></i>
         <i class="far fa-bell mr-4"></i>
         <div class="mr-4">
           <img src="../../../assets/img_avatar.png" alt="img" />
-          <span class="username">UserName</span>
+          <span class="username">Ahmed Ezzat</span>
         </div>
         <i class="fas fa-cog mr-4"></i>
       </div>

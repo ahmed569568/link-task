@@ -1,20 +1,17 @@
-import { MessageService } from './../../services/message.service';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { LayoutService } from '@app/@shared/services/layout.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
-  public menuStatus: boolean;
-
-  constructor(private messageService: MessageService) {}
+export class HeaderComponent {
+  constructor(private layoutService: LayoutService) {}
 
   ngOnInit() {}
 
   toggle(status: boolean) {
-    this.menuStatus = status;
-    this.messageService.toggleMenu(status);
+    this.layoutService.toggleMenu(status);
   }
 }

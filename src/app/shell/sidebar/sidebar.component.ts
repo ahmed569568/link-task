@@ -1,5 +1,5 @@
-import { MessageService } from './../../services/message.service';
 import { Component, OnInit } from '@angular/core';
+import { LayoutService } from '@app/@shared/services/layout.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class SidebarComponent implements OnInit {
   toggle: boolean;
 
-  constructor(private messageServices: MessageService) {}
+  constructor(private layoutService: LayoutService) {}
 
   ngOnInit() {
-    this.messageServices.menuSubject.subscribe((status: boolean) => (this.toggle = status));
+    this.layoutService.menuSubject.subscribe((status: boolean) => (this.toggle = status));
   }
 }

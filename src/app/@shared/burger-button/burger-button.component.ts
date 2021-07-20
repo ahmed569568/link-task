@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-burger-button',
@@ -6,8 +6,13 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./burger-button.component.scss'],
 })
 export class BurgerButtonComponent {
-  @Input() menuStatus: boolean = false;
+  menuStatus: boolean = false;
   @Output() toggle: EventEmitter<any> = new EventEmitter();
 
   constructor() {}
+
+  toggleButton(status: boolean) {
+    this.menuStatus = !this.menuStatus;
+    this.toggle.emit(status);
+  }
 }
