@@ -1,12 +1,11 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import data from '../../assets/resources/db.json';
 
 @Injectable({
   providedIn: 'root',
 })
 export class NewsService {
-  constructor(private HttpClient: HttpClient) {}
   getNews() {
-    return this.HttpClient.get('http://localhost:3000/articles');
+    return data.articles;
   }
 }

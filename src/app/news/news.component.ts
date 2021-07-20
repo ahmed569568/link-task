@@ -14,12 +14,6 @@ export class NewsComponent implements OnInit {
   constructor(private newsServices: NewsService) {}
 
   ngOnInit() {
-    this.getNewsList();
-  }
-  getNewsList() {
-    this.newsServices.getNews().subscribe((res) => {
-      console.log(res, 'im res');
-      this.newsList = res;
-    });
+    this.newsList = this.newsServices.getNews();
   }
 }
