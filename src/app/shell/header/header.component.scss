@@ -16,34 +16,4 @@
   .nav-link.dropdown-toggle {
     cursor: pointer;
   }
-  .button {
-    background: none;
-    border: none;
-  }
-  .menu {
-    .one {
-      transform: rotate(-45deg) translate(-2px, 5px);
-      transition: 0.5s ease-in-out;
-      background-color: $white !important;
-    }
-    .three {
-      transform: rotate(45deg) translate(-8px, -11px);
-      transition: 0.5s ease-in-out;
-      background-color: $white !important;
-    }
-    .two {
-      opacity: 0;
-      transition: 0.5s ease-in-out;
-    }
-    span {
-      display: block;
-      width: 34px;
-      height: 3px;
-      background: $white;
-      margin: 7px;
-    }
-    .span-three {
-      width: 24px !important;
-    }
-  }
 }

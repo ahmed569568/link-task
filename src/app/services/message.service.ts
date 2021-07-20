@@ -5,13 +5,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class MessageService {
-  private subject = new Subject<any>();
+  menuSubject: Subject<boolean> = new Subject<boolean>();
   constructor() {}
 
-  sendMessage(show: boolean) {
-    this.subject.next(show);
-  }
-  receivedMessage() {
-    return this.subject.asObservable();
+  toggleMenu(status: boolean) {
+    this.menuSubject.next(status);
   }
 }

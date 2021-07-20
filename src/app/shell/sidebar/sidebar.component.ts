@@ -12,9 +12,6 @@ export class SidebarComponent implements OnInit {
   constructor(private messageServices: MessageService) {}
 
   ngOnInit() {
-    this.messageServices.receivedMessage().subscribe((res) => {
-      console.log(res);
-      this.toggle = res;
-    });
+    this.messageServices.menuSubject.subscribe((status: boolean) => (this.toggle = status));
   }
 }

@@ -1,0 +1,7 @@
+<button type="button" id="sidebarCollapse" class="button ml-3 pt-2" (click)="toggle.emit(!menuStatus)">
+  <div class="menu">
+    <span [class.one]="menuStatus"></span>
+    <span [class.two]="menuStatus"></span>
+    <span class="span-three" [class.three]="menuStatus"></span>
+  </div>
+</button>

@@ -7,16 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  menuHidden = true;
-  public show: boolean = false;
+  public menuStatus: boolean;
 
   constructor(private messageService: MessageService) {}
 
   ngOnInit() {}
 
-  toggle() {
-    this.show = !this.show;
-    this.messageService.sendMessage(this.show);
-    this.menuHidden = !this.menuHidden;
+  toggle(status: boolean) {
+    this.menuStatus = status;
+    this.messageService.toggleMenu(status);
   }
 }
